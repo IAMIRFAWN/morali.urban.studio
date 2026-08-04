@@ -1,53 +1,159 @@
-/* =========================
-   MORALI PERSIAN STYLE
-========================= */
+/* ===================================
+   MORALI STUDIO - DESIGN SYSTEM
+   =================================== */
 
+
+/* ROOT COLORS */
+
+:root{
+
+    /* Brand Colors */
+
+    --bg-main:#F6F4EF;
+
+    --bg-white:#FFFFFF;
+
+    --bg-soft:#EFEAE1;
+
+
+    --text-main:#1F1F1F;
+
+    --text-secondary:#6D6D6D;
+
+
+    --brand-gold:#C8B18A;
+
+    --brand-dark:#242424;
+
+
+    --line-color:#E3DDD3;
+
+
+
+    /* Shadows */
+
+    --shadow-soft:
+    0 15px 40px rgba(0,0,0,.08);
+
+
+    --shadow-hover:
+    0 20px 60px rgba(0,0,0,.12);
+
+
+
+    /* Radius */
+
+    --radius-small:8px;
+
+    --radius-medium:16px;
+
+    --radius-large:24px;
+
+
+
+    /* Transition */
+
+    --transition:.35s ease;
+
+
+
+    /* Container */
+
+    --container-width:1280px;
+
+}
+
+
+
+
+/* GLOBAL */
 
 *{
+
     margin:0;
+
     padding:0;
+
     box-sizing:border-box;
+
 }
 
 
 
 html{
+
     scroll-behavior:smooth;
+
 }
 
 
 
 body{
 
+    background:var(--bg-main);
+
+    color:var(--text-main);
+
     font-family:'Vazirmatn',sans-serif;
 
-    background:#0b0b0b;
-
-    color:white;
-
-    direction:rtl;
-
-    line-height:1.9;
+    line-height:1.8;
 
 }
 
 
+
+
+/* TITLES */
+
+h1,
+h2,
+h3{
+
+    color:var(--text-main);
+
+    font-weight:600;
+
+    letter-spacing:-.5px;
+
+}
+
+
+
+
+/* LINKS */
 
 a{
 
     text-decoration:none;
 
-    color:white;
+    color:inherit;
+
+    transition:var(--transition);
 
 }
 
 
 
+/* IMAGES */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+
+
+
+/* CONTAINER */
+
 .container{
 
     width:90%;
 
-    max-width:1200px;
+    max-width:var(--container-width);
 
     margin:auto;
 
@@ -57,6 +163,1093 @@ a{
 
 
 
+
+/* SECTION STYLE */
+
+section{
+
+    padding:100px 0;
+
+}
+
+
+
+
+/* SECTION TITLES */
+
+.section-title{
+
+    text-align:center;
+
+    font-size:38px;
+
+    margin-bottom:60px;
+
+    position:relative;
+
+}
+
+
+
+.section-title::after{
+
+
+    content:"";
+
+
+    display:block;
+
+
+    width:60px;
+
+
+    height:3px;
+
+
+    background:var(--brand-gold);
+
+
+    margin:20px auto 0;
+
+
+}
+
+
+
+
+
+
+/* BUTTON SYSTEM */
+
+
+.btn{
+
+
+    display:inline-flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    padding:14px 38px;
+
+
+    background:var(--brand-dark);
+
+
+    color:white;
+
+
+    border-radius:50px;
+
+
+    font-size:14px;
+
+
+    transition:var(--transition);
+
+
+}
+
+
+
+.btn:hover{
+
+
+    background:var(--brand-gold);
+
+
+    color:white;
+
+
+    transform:translateY(-3px);
+
+
+}
+
+
+
+
+
+
+.btn-outline{
+
+
+    display:inline-flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    padding:13px 36px;
+
+
+    border:1px solid var(--brand-dark);
+
+
+    border-radius:50px;
+
+
+    color:var(--brand-dark);
+
+
+    transition:var(--transition);
+
+
+}
+
+
+
+.btn-outline:hover{
+
+
+    background:var(--brand-dark);
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+
+
+/* CARDS */
+
+
+.card{
+
+
+    background:var(--bg-white);
+
+
+    border-radius:var(--radius-medium);
+
+
+    box-shadow:var(--shadow-soft);
+
+
+    transition:var(--transition);
+
+
+}
+
+
+
+.card:hover{
+
+
+    transform:translateY(-8px);
+
+
+    box-shadow:var(--shadow-hover);
+
+
+}
+
+
+
+
+
+
+
+/* GOLD LINE */
+
+
+.gold-line{
+
+
+    width:80px;
+
+
+    height:3px;
+
+
+    background:var(--brand-gold);
+
+
+}
+
+
+
+
+
+
+/* SMALL TEXT */
+
+
+.subtitle{
+
+
+    color:var(--text-secondary);
+
+
+    font-size:16px;
+
+
+}
+
+
+
+
+
+
+
+/* SELECTION COLOR */
+
+
+::selection{
+
+
+    background:var(--brand-gold);
+
+
+    color:white;
+
+
+}
+
+/* ===================================
+   MORALI TYPOGRAPHY SYSTEM
+   =================================== */
+
+
+/* MAIN HERO TITLE */
+
+.title-xl{
+
+    font-size:64px;
+
+    line-height:1.25;
+
+    font-weight:700;
+
+    letter-spacing:-1px;
+
+    color:var(--text-main);
+
+}
+
+
+
+/* LARGE SECTION TITLE */
+
+.title-lg{
+
+    font-size:42px;
+
+    line-height:1.4;
+
+    font-weight:600;
+
+    color:var(--text-main);
+
+}
+
+
+
+/* MEDIUM TITLE */
+
+.title-md{
+
+    font-size:24px;
+
+    line-height:1.5;
+
+    font-weight:600;
+
+    color:var(--text-main);
+
+}
+
+
+
+/* NORMAL TEXT */
+
+.text-main{
+
+    font-size:17px;
+
+    line-height:2;
+
+    color:var(--text-secondary);
+
+}
+
+
+
+/* SMALL TEXT */
+
+.text-small{
+
+    font-size:14px;
+
+    line-height:1.8;
+
+    color:var(--text-secondary);
+
+}
+
+
+
+/* BRAND NAME STYLE */
+
+.brand-text{
+
+    font-size:16px;
+
+    letter-spacing:6px;
+
+    font-weight:600;
+
+    color:var(--text-main);
+
+}
+
+
+
+/* ===================================
+   SPACING SYSTEM
+   =================================== */
+
+
+:root{
+
+
+    --space-xs:8px;
+
+
+    --space-sm:16px;
+
+
+    --space-md:32px;
+
+
+    --space-lg:64px;
+
+
+    --space-xl:120px;
+
+}
+
+/* ===================================
+   MORALI ICON SYSTEM
+   =================================== */
+
+
+/* BASE ICON */
+
+.icon{
+
+    width:48px;
+
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--bg-soft);
+
+    color:var(--brand-dark);
+
+    font-size:20px;
+
+    transition:var(--transition);
+
+}
+
+
+
+
+.icon:hover{
+
+    background:var(--brand-gold);
+
+    color:white;
+
+    transform:translateY(-5px);
+
+}
+
+
+
+
+/* SOCIAL ICON */
+
+.social-icon{
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    border:1px solid var(--line-color);
+
+    color:var(--text-main);
+
+    transition:var(--transition);
+
+}
+
+
+
+.social-icon:hover{
+
+    background:var(--brand-dark);
+
+    color:white;
+
+    border-color:var(--brand-dark);
+
+    transform:translateY(-4px);
+
+}
+
+
+
+
+
+/* CONTACT ICON */
+
+.contact-icon{
+
+    width:40px;
+
+    height:40px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:var(--brand-gold);
+
+    font-size:20px;
+
+}
+
+
+
+
+
+/* MENU ICON */
+
+.menu-icon{
+
+    width:44px;
+
+    height:44px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:transparent;
+
+    transition:var(--transition);
+
+}
+
+
+
+.menu-icon:hover{
+
+    background:var(--bg-soft);
+
+}
+
+/* ===================================
+   MORALI MOTION SYSTEM
+   =================================== */
+
+
+/* DEFAULT TRANSITION */
+
+.smooth{
+
+    transition:var(--transition);
+
+}
+
+
+
+
+/* FADE IN */
+
+.fade-up{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:.8s ease;
+
+}
+
+
+
+.fade-up.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+
+
+
+/* SCALE IMAGE */
+
+.image-hover{
+
+    overflow:hidden;
+
+}
+
+
+
+.image-hover img{
+
+    transition:.8s ease;
+
+}
+
+
+
+.image-hover:hover img{
+
+    transform:scale(1.06);
+
+}
+
+
+
+
+
+/* BUTTON MOTION */
+
+.btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(255,255,255,.15);
+
+    transition:.5s;
+
+}
+
+
+
+.btn:hover::before{
+
+    left:100%;
+
+}
+
+
+
+
+
+
+/* LINE ANIMATION */
+
+.animated-line{
+
+    position:relative;
+
+}
+
+
+
+.animated-line::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-8px;
+
+    right:0;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--brand-gold);
+
+    transition:.4s;
+
+}
+
+
+
+.animated-line:hover::after{
+
+    width:100%;
+
+}
+
+/* ===================================
+   MORALI MOTION SYSTEM
+   =================================== */
+
+
+/* DEFAULT TRANSITION */
+
+.smooth{
+
+    transition:var(--transition);
+
+}
+
+
+
+
+/* FADE IN */
+
+.fade-up{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:.8s ease;
+
+}
+
+
+
+.fade-up.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+
+
+
+/* SCALE IMAGE */
+
+.image-hover{
+
+    overflow:hidden;
+
+}
+
+
+
+.image-hover img{
+
+    transition:.8s ease;
+
+}
+
+
+
+.image-hover:hover img{
+
+    transform:scale(1.06);
+
+}
+
+
+
+
+
+/* BUTTON MOTION */
+
+.btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(255,255,255,.15);
+
+    transition:.5s;
+
+}
+
+
+
+.btn:hover::before{
+
+    left:100%;
+
+}
+
+
+
+
+
+
+/* LINE ANIMATION */
+
+.animated-line{
+
+    position:relative;
+
+}
+
+
+
+.animated-line::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-8px;
+
+    right:0;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--brand-gold);
+
+    transition:.4s;
+
+}
+
+
+
+.animated-line:hover::after{
+
+    width:100%;
+
+}
+
+/* ===================================
+   MORALI PRELOADER
+   =================================== */
+
+
+.preloader{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+
+    height:100vh;
+
+    background:#ffffff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    z-index:9999;
+
+    transition:3s ease;
+
+}
+
+
+
+
+.preloader-content{
+
+    text-align:center;
+
+}
+
+
+.preloader-logo{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    animation:logoReveal 3s ease forwards;
+
+}
+
+
+
+.preloader-logo img{
+
+    width:500px;
+    margin-bottom: -50px;
+    height:auto;
+    opacity: 0;
+    display:block;
+    animation: logoReveal 3s ease forwards;
+
+}
+
+
+
+/* LOGO ANIMATION */
+
+
+
+@keyframes letterShow{
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+.preloader-subtitle{
+
+    margin-top:20px;
+
+    font-size:14px;
+
+    letter-spacing:4px;
+
+    color:var(--text-secondary);
+
+    opacity:0;
+
+    animation:subtitleReveal 1.5s ease .5s forwards;
+
+}
+
+
+
+
+.preloader-line{
+
+    width:180px;
+
+    height:2px;
+
+    background:var(--line-color);
+
+    margin:35px auto 0;
+
+    overflow:hidden;
+
+}
+
+
+
+
+.preloader-line span{
+
+    display:block;
+
+    width:0;
+
+    height:100%;
+
+    background:var(--brand-gold);
+
+    animation:lineMove 1.8s ease forwards;
+
+}
+
+
+
+
+
+/* ANIMATIONS */
+
+
+@keyframes logoReveal{
+
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+
+@keyframes subtitleReveal{
+
+
+    from{
+
+        opacity:0;
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+
+
+@keyframes lineMove{
+
+
+    from{
+
+        width:0;
+
+    }
+
+
+    to{
+
+        width:100%;
+
+    }
+
+}
+
+@keyframes logoReveal{
+
+    0%{
+        opacity:0;
+        transform:translateY(20px) scale(.95);
+        filter:blur(8px);
+    }
+
+    60%{
+        opacity:1;
+        transform:translateY(0) scale(1.03);
+        filter:blur(2px);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateY(0) scale(1);
+        filter:blur(0);
+    }
+
+}
+
+@keyframes logoFloat{
+
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.preloader.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+}
 
 /* =========================
 HEADER
@@ -78,7 +1271,7 @@ HEADER
     width:100%;
 
 
-    height:90px;
+    height:88px;
 
 
     padding:0 0%;
@@ -97,11 +1290,12 @@ HEADER
     z-index:1000;
 
 
-    background:rgba(0,0,0,.45);
+    background:rgba(15,15,15,.72);
 
 
-    backdrop-filter:blur(15px);
-border-bottom:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(22px);
+border-bottom:1px solid rgba(255,255,255,.06);
+    transition: .35s;
 
 }
 
@@ -113,11 +1307,11 @@ display:flex;
 
 align-items:center;
 
-gap:18px;
+gap:15px;
 
 height:90px;
 
-margin-left: 30px;
+margin-left: 35px;
 
 }
 
@@ -125,26 +1319,27 @@ margin-left: 30px;
 
 .logo img{
 
-height:90px;
+height:120px;
 
-width:auto;
+width:80px;
 
 object-fit:contain;
-
+transition: .4s;
+margin-bottom: 5px;
 }
 
 
 
 .brand-name{
 
-font-size:15px;
+font-size:17px;
 
-letter-spacing:10px;
+letter-spacing:8px;
 
-font-weight:500;
-
+font-weight:600;
+color: #f5f5f5;
 white-space:nowrap;
-
+transition: .3s;
 }
 
 
@@ -199,9 +1394,9 @@ SEARCH
 
 .search-box a{
 
-    width:42px;
+    width:44px;
 
-    height:42px;
+    height:44px;
 
     border-radius:50%;
 
@@ -211,7 +1406,7 @@ SEARCH
 
     justify-content:center;
 
-    background:rgba(255,255,255,.08);
+    background:rgba(255,255,255,.07);
 
     color:#fff;
 
@@ -220,12 +1415,9 @@ SEARCH
 }
 
 .search-box a:hover{
-
-    background:#c8b18a;
-
-    color:#111;
-
-}
+    background:rgba(255, 255, 255, .12);
+    transform: none;
+    color:#c8b18a;}
 
 
 
@@ -236,7 +1428,7 @@ SEARCH
     display:flex;
 
 
-    gap:35px;
+    gap:30px;
 
 
 }
@@ -245,47 +1437,42 @@ SEARCH
 
 
 .navbar a{
-
-
-    font-size:15px;
-
-
-    transition:.3s;
-
-
+    position: relative;
+    font-size:14px;
+    font-weight: 500;
+    color: #ececec;
+    transition:.35s;
 }
 
-
+.navbar a::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    background:#c8b18a;
+    transition: .35s;}
 
 .navbar a:hover{
+    color: #ffffff;}
 
-
-    color:#c8b18a;
-
-
-}
-
+.navbar a:hover::after{
+    width: 100%;}
 
 .language{
     display: flex;
-    align-items: center;
-    
-}
-
-
+    align-items: center;}
 
 .language a{
+    color:#c8b18a;
+    font-size:13px;
+    letter-spacing: 2px;
+    transition: .3s;}
 
-
-    color:#dcbd88;
-
-
-    font-size:14px;
-    
-
-
+.language a:hover{
+    color: #fff;
 }
-
 
 .header-right{
 
@@ -315,7 +1502,7 @@ SEARCH
 
     width:100%;
 
-    height:100%;
+    height:110%;
 
 
     background:
@@ -331,7 +1518,8 @@ SEARCH
     background-size:cover;
 
     background-position:center;
-
+    transform: translateY(-30px);
+    
 }
 
 
@@ -345,7 +1533,7 @@ SEARCH
     position:absolute;
 
 
-    bottom:200px;
+    bottom:170px;
 
 
     left:50%;
@@ -365,12 +1553,13 @@ SEARCH
 
 
 .hero-content h1{
-    font-family: 'Estedad',sans-serif;
-    font-size:40px;
-    font-weight:700;
+    font-family: 'Vazirmatn',sans-serif;
+    font-size:85px;
+    font-weight:900;
     letter-spacing: 0;
     line-height: 1.8;
     margin-bottom: 25px;
+    color:#faf9f9;
 
 
 }
@@ -380,33 +1569,51 @@ SEARCH
 .hero-content h2{
 
 
-    margin-bottom:25px;
+    margin-bottom:30px;
 
 
-    font-size:25px;
+    font-size:45px;
 
 
-    letter-spacing:5px;
+    letter-spacing:8px;
 
 
-    color:#fafaf9;
+    color:#ffffff;
 
 
 }
+.hero-category{
 
+    display:block;
+
+    margin-top:15px;
+
+    margin-bottom:20px;
+
+    font-size:14px;
+
+    letter-spacing:5px;
+
+    color:#fbfbfa;
+
+    font-weight:400;
+
+}
 .hero-slogan{
 
     margin-top:20px;
-
-    font-size:18px;
+    font-family: 'IranNastaliq',sans-serif;
+    font-size:22px;
 
     color:#f9f9f8;
 
-    font-weight:300;
+    font-weight:400;
 
     letter-spacing:10px;
 
     font-style:Bold;
+    position: relative;
+    top: 80px;
 
 }
 
@@ -487,7 +1694,7 @@ SEARCH
     left:50%;
 
 
-    bottom:-200px;
+    bottom:-270px;
 
 
     transform:translateX(-50%);
@@ -505,7 +1712,7 @@ SEARCH
 .floating-logo img{
 
 
-    width:300px;
+    width:400px;
 
 
     height:300px;
@@ -847,7 +2054,27 @@ SERVICES
 
 }
 
+.services-slogan{
 
+    width:100%;
+
+    text-align:center;
+
+    margin-top:80px;
+
+    margin-bottom:0;
+
+    font-family:'IranNastaliq',sans-serif;
+
+    font-size:32px;
+
+    color:#c8b18a;
+
+    opacity:1;
+
+    display:block;
+
+}
 
 
 /* =========================
@@ -1426,3 +2653,4 @@ footer h2{
     margin-bottom:30px;
 
 }
+
